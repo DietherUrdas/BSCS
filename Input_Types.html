@@ -1,0 +1,63 @@
+<?php 
+//Script name: Input_Types.html
+?>
+
+<html>
+    <head>
+        <title>Use of Input Types Form Tag in PHP</title>
+    </head>
+    <body bgcolor=99ffff>
+        <form action="Input_Types_Output.php" method="post">
+            <b> TextFields</b> <br>
+            Enter your name:
+            <input type="text" name="txtName" placeholder="Name"> <br>
+            Enter your Age:
+            <input type="text" name="txtAge" placeholder="Age"> <br>
+            Enter your Course:
+            <input type="text" name="txtCourse" placeholder="Course">
+
+            <br> <br>
+            <b> Checkboxes</b> <br>
+            Are you an officer? <br>
+            <input type="checkbox" name="chkYes"> Yes <br><br>
+
+            <b> Multiple Checkboxes</b> <br>
+            What is/are your favourite subjects?<br>
+            <input type="checkbox" name="chkCP" value="Computer Programming"> Computer Programming <br>
+            <input type="checkbox" name="chkCG" value="Computer Graphics"> Computer Graphics <br>
+            <input type="checkbox" name="chkWBA" value="Web Based Application"> Web Based Application 
+            <br> <br> 
+
+            <b> Radio Buttons</b> <br>
+            Which do you prefer most? <br>
+            <input type="radio" name="rdo" value="Microsoft" checked="TRUE"> Microsoft <br>
+            <input type="radio" name="rdo" value="Open Source"> Open Source <br>
+            <input type="radio" name="rdo" value="No comment"> No comment <br> <br> 
+
+            <b> Combo Boxes</b> <br>
+            What job do you prefer after graduation?
+            <select name="cboJob">
+                <option>Call Center Agent</option>
+                <option>Programmer / Analyst</option>
+                <option>Office Employee</option>
+                <option>Computer Instructor</option>
+            </select>
+            <br> <br> 
+            <b> List Boxes</b> <br>
+            Which do you prefer for a thesis topic/title?
+            <select name="IsThesisTitle">
+                <option>Web Based Application</option>
+                <option>Computer Graphics</option>
+                <option>Computer Programming</option>
+                <option>Other</option>
+            </select>
+            <br> <br> 
+            <b> Text Area</b> <br>
+            Enter Comments here:
+            <textarea name="txtComments" rows="5" cols="40"></textarea>
+            <br> <br> 
+            <input type="submit" value="See Results">
+            <input type="reset" value="Clear">
+            </form>
+            </body>
+</html>
