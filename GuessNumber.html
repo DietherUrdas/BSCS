@@ -1,17 +1,32 @@
-<?php
-//Script name: GuessNumber.html
-?>
-
-<html>
-	<head> 
-		<title> Use of Decision Statements in PHP </title> 
-	</head>
-		<body bgcolor=cccc99>
-			<h2> Guess the Number Game </h2>
-			<form action="GuessNumber.php" method="post">
-				Think of a number from 1-10:
-				<input type="text" name="guess"> <br> <br>
-				<input type="submit" value="See If You Are Correct">
-			</form>
-		</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.php" class="nav-link"><span>Home</span></a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h1>Guess the Number Game</h1>
+            <p class="subtitle">Use of Decision Statements in PHP</p>
+            <div class="game-info">
+                <p>Think of a number from 1 to 10 and see if you can guess it correctly!</p>
+            </div>
+            <form action="GuessNumber.php" method="post" class="form">
+                <div class="form-group">
+                    <label for="guess">Enter your guess (1-10):</label>
+                    <input type="number" id="guess" name="guess" class="input-field" min="1" max="10" placeholder="Enter number 1-10" required>
+                </div>
+                <div class="form-actions">
+                    <input type="submit" value="See If You Are Correct" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
 </html>
