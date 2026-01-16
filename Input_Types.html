@@ -1,63 +1,124 @@
-<?php 
-//Script name: Input_Types.html
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Types Form Demo</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.php" class="nav-link"><span>Home</span></a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h1>Input Types Form Demo</h1>
+            <p class="subtitle">Use of Input Types Form Tag in PHP</p>
+            <form action="Input_Types_Output.php" method="post" class="form">
+                <div class="form-section">
+                    <h3>📝 TextFields</h3>
+                    <div class="form-group">
+                        <label for="txtName">Enter Your Name:</label>
+                        <input type="text" id="txtName" name="txtName" class="input-field" placeholder="Last, First Middle">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtAge">Enter Your Age:</label>
+                        <input type="text" id="txtAge" name="txtAge" class="input-field" placeholder="Your age">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCourse">Enter Your Course:</label>
+                        <input type="text" id="txtCourse" name="txtCourse" class="input-field" placeholder="Your course">
+                    </div>
+                </div>
 
-<html>
-    <head>
-        <title>Use of Input Types Form Tag in PHP</title>
-    </head>
-    <body bgcolor=99ffff>
-        <form action="Input_Types_Output.php" method="post">
-            <b> TextFields</b> <br>
-            Enter your name:
-            <input type="text" name="txtName" placeholder="Name"> <br>
-            Enter your Age:
-            <input type="text" name="txtAge" placeholder="Age"> <br>
-            Enter your Course:
-            <input type="text" name="txtCourse" placeholder="Course">
+                <div class="form-section">
+                    <h3>☑️ Checkbox</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="chkYes" value="Yes">
+                            <span>Are you an officer of COMSOC?</span>
+                        </label>
+                    </div>
+                </div>
 
-            <br> <br>
-            <b> Checkboxes</b> <br>
-            Are you an officer? <br>
-            <input type="checkbox" name="chkYes"> Yes <br><br>
+                <div class="form-section">
+                    <h3>☑️ Multiple Checkboxes</h3>
+                    <p>What is/are your favorite computer subject/s:</p>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="chkCP" value="Computer Programming">
+                            <span>Computer Programming</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="chkCG" value="Computer Graphics">
+                            <span>Computer Graphics</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="chkWBA" value="Web Based Application">
+                            <span>Web Based Application</span>
+                        </label>
+                    </div>
+                </div>
 
-            <b> Multiple Checkboxes</b> <br>
-            What is/are your favourite subjects?<br>
-            <input type="checkbox" name="chkCP" value="Computer Programming"> Computer Programming <br>
-            <input type="checkbox" name="chkCG" value="Computer Graphics"> Computer Graphics <br>
-            <input type="checkbox" name="chkWBA" value="Web Based Application"> Web Based Application 
-            <br> <br> 
+                <div class="form-section">
+                    <h3>🔘 Radio Buttons</h3>
+                    <p>Which do you prefer most?</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="rdo" value="Microsoft" checked>
+                            <span>Microsoft</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="rdo" value="Open Source">
+                            <span>Open Source</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="rdo" value="No comment">
+                            <span>No comment</span>
+                        </label>
+                    </div>
+                </div>
 
-            <b> Radio Buttons</b> <br>
-            Which do you prefer most? <br>
-            <input type="radio" name="rdo" value="Microsoft" checked="TRUE"> Microsoft <br>
-            <input type="radio" name="rdo" value="Open Source"> Open Source <br>
-            <input type="radio" name="rdo" value="No comment"> No comment <br> <br> 
+                <div class="form-section">
+                    <h3>📋 Combo Box</h3>
+                    <div class="form-group">
+                        <label for="cboJob">What job do you prefer after graduation?</label>
+                        <select id="cboJob" name="cboJob" class="input-field">
+                            <option>Call Center Agent</option>
+                            <option>Programmer / Analyst</option>
+                            <option>Office Employee</option>
+                            <option>Computer Instructor</option>
+                        </select>
+                    </div>
+                </div>
 
-            <b> Combo Boxes</b> <br>
-            What job do you prefer after graduation?
-            <select name="cboJob">
-                <option>Call Center Agent</option>
-                <option>Programmer / Analyst</option>
-                <option>Office Employee</option>
-                <option>Computer Instructor</option>
-            </select>
-            <br> <br> 
-            <b> List Boxes</b> <br>
-            Which do you prefer for a thesis topic/title?
-            <select name="IsThesisTitle">
-                <option>Web Based Application</option>
-                <option>Computer Graphics</option>
-                <option>Computer Programming</option>
-                <option>Other</option>
-            </select>
-            <br> <br> 
-            <b> Text Area</b> <br>
-            Enter Comments here:
-            <textarea name="txtComments" rows="5" cols="40"></textarea>
-            <br> <br> 
-            <input type="submit" value="See Results">
-            <input type="reset" value="Clear">
+                <div class="form-section">
+                    <h3>📋 List Box (Multiple Selection)</h3>
+                    <div class="form-group">
+                        <label for="lstThesisTitle">Which do you prefer for a thesis topic/title? (Hold Ctrl/Cmd to select multiple)</label>
+                        <select id="lstThesisTitle" name="lstThesisTitle" multiple class="input-field" size="4">
+                            <option>Web Based/On-Line Application</option>
+                            <option>Network-Based Application</option>
+                            <option>System/Software Development</option>
+                            <option>Computer Aided Instruction</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>📄 TextArea</h3>
+                    <div class="form-group">
+                        <label for="txtaComments">Enter comments here:</label>
+                        <textarea id="txtaComments" name="txtaComments" class="textarea-field" rows="5" placeholder="Your comments..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <input type="submit" value="See Results" class="btn btn-primary">
+                    <input type="reset" value="Clear" class="btn btn-secondary">
+                </div>
             </form>
-            </body>
+        </div>
+    </div>
+</body>
 </html>

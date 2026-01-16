@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPSI Holidays - Reservation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.php" class="nav-link"><span>Home</span></a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h1>PAPSI Holidays</h1>
+            <p class="subtitle">Reservation Form</p>
+            <form action="Holiday.php" method="post" class="form">
+                <div class="form-section">
+                    <h3>Destination</h3>
+                    <p>Choose your destination:</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="rdoDestination" value="HongKong" checked>
+                            <span>🇭🇰 HongKong</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="rdoDestination" value="Singapore">
+                            <span>🇸🇬 Singapore</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="rdoDestination" value="Malaysia">
+                            <span>🇲🇾 Malaysia</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Hotel Type</h3>
+                    <p>Choose your hotel type:</p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="rdoHotel" value="three" checked>
+                            <span>⭐⭐⭐ Three Star</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="rdoHotel" value="five">
+                            <span>⭐⭐⭐⭐⭐ Five Star</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <input type="submit" value="Reserve" class="btn btn-primary">
+                    <input type="reset" value="Clear" class="btn btn-secondary">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
